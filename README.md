@@ -1,12 +1,8 @@
-
-````markdown
 # JS Endpoint Finder 🔎
 
 A lightweight JavaScript bookmarklet for finding potential web endpoints referenced in HTML and JavaScript files.
 
 Built for **bug bounty hunting and authorized security testing**.
-
-**Author:** Maniesh-Neupane (`pwn4arn`)
 
 ## Demo
 
