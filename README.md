@@ -1,9 +1,12 @@
+
+````markdown
 # JS Endpoint Finder 🔎
 
-A lightweight JavaScript bookmarklet for quickly finding potential endpoints referenced in a web application.
+A lightweight JavaScript bookmarklet for finding potential web endpoints referenced in HTML and JavaScript files.
 
 Built for **bug bounty hunting and authorized security testing**.
 
+**Author:** Maniesh-Neupane (`pwn4arn`)
 
 ## Demo
 
@@ -11,47 +14,100 @@ Built for **bug bounty hunting and authorized security testing**.
 
 ## Features
 
-* Extracts potential endpoints from HTML
-* Searches inline JavaScript
-* Fetches and searches external JavaScript files
-* Filter discovered endpoints
-* Copy individual endpoints
-* Copy all endpoints
-* Highlights interesting paths such as:
-
-  * `/api`
-  * `/auth`
-  * `/login`
-  * `/admin`
-  * `/graphql`
-  * `/internal`
-  * `/health`
+- 🔎 Finds potential endpoints from HTML
+- 📜 Scans inline JavaScript
+- 📦 Scans external JavaScript files
+- 🔍 Filter discovered endpoints
+- 📋 Copy individual endpoints
+- 📋 Copy all endpoints
+- 🎨 Highlights interesting paths such as:
+  - `/api`
+  - `/auth`
+  - `/login`
+  - `/admin`
+  - `/graphql`
+  - `/internal`
+  - `/health`
 
 ## Installation
 
-1. Download or copy [`bookmarklet.js`](bookmarklet.js).
-2. Create a new browser bookmark.
-3. Paste the JavaScript from `bookmarklet.js` into the bookmark URL field.
-4. Open a target that you are authorized to test.
-5. Click the bookmarklet.
+### 1. Download the bookmarklet
+
+Download [`bookmarklet.js`](bookmarklet.js) from this repository.
+
+### 2. Enable the Bookmarks Bar
+
+In Chrome or Chromium-based browsers, press:
+
+```text
+Ctrl + Shift + B
+````
+
+This will show the browser's bookmarks bar.
+
+### 3. Create a bookmark
+
+Right-click on the **Bookmarks Bar** and select:
+
+```text
+Add page
+```
+
+or:
+
+```text
+Add bookmark
+```
+
+Set the bookmark name to:
+
+```text
+JS Endpoint Finder
+```
+
+### 4. Add the bookmarklet code
+
+Open [`bookmarklet.js`](bookmarklet.js) and copy the complete JavaScript code.
+
+Paste it into the bookmark's **URL** field.
+
+The code should start with:
+
+```text
+javascript:(function(){
+```
+
+Then save the bookmark.
+
+### 5. Use the bookmarklet
+
+Open a web application that you are authorized to test.
+
+Click:
+
+```text
+JS Endpoint Finder
+```
+
+from your bookmarks bar.
+
+The endpoint finder panel will appear on the right side of the page.
 
 ## Usage
 
-Run the bookmarklet on a web application.
-
-It will scan:
+The bookmarklet scans:
 
 ```text
 HTML
+↓
 Inline JavaScript
+↓
 External JavaScript files
+↓
+Potential endpoint references
 ```
 
-Potential paths will then appear in a panel on the right side of the page.
-
-Use the **Filter** box to search for specific endpoints and **Copy All** to copy the results.
-
-## Example Output
+Example results:
 
 ```text
 /api/v1/users
@@ -63,10 +119,3 @@ Use the **Filter** box to search for specific endpoints and **Copy All** to copy
 /api/config
 ```
 
-
-
-**Maniesh-Neupane**
-
-`pwn4arn`
-
-Bug Bounty Hunter | Security Researcher
